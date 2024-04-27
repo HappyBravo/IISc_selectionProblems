@@ -189,7 +189,7 @@ Data columns (total 63 columns):
 </figure>
 
 ---
-<div style= "display: flex; justiify-content:space-between;">
+<div style= "display: flex; justify-content:space-between;">
 <figure>
   <img src="./images/features_PearsonMatrixx.png" width="500" height="500" alt="Movies Budget over the years and success." style= "width : 100%; height: auto">
   <figcaption><b>Pearson correlation matrix</b> visualizing relationships between features.</figcaption>

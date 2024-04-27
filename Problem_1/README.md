@@ -6,7 +6,12 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#the-goal">The Goal</a></li>
+    <li>
+      <a href="#requirements">Requirements</a>
+    </li>
+    <li>
+      <a href="#the-goal">The Goal</a>
+    </li>
     <li>
       <a href="#features-in-the-data">Features in the data</a>
     </li>
@@ -24,6 +29,21 @@
     </li>
   </ol>
 </details>
+
+## Requirements
+
+Ensure you have the following packages installed:
+
+- `pandas` : For data manipulation and analysis.
+- `numpy` : For numerical operations and array manipulation.
+- `tqdm` : For displaying progress bars during data processing.
+- `datetime`: For handling date and time objects.
+- `seaborn` : For data visualization.
+- `matplotlib` : For creating plots and visualizations.
+- `scikit-learn` : For machine learning algorithms and evaluation metrics.
+- `xgboost` : For implementing XGBoost classifier.
+- `csv`: For reading and writing CSV files.
+- `os`: For operating system-related functionality.
 
 <!-- ABOUT THE PROJECT -->
 ## The Goal

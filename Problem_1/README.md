@@ -1,30 +1,27 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 
-# 
-<h3 align="center">Problem 1: Data Science Challenge</h3>
+<h1 align="center">Problem 1: Data Science Challenge</h3>
 
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#the-goal">The Goal</a></li>
     <li>
-      <a href="#project-structure">Project Structure</a>
+      <a href="#features-in-the-data">Features in the data</a>
     </li>
     <li>
-      <a href="#how-to-run">How to Run</a>
+      <a href="#visualization">Visualization </a>
     </li>
     <li>
-      <a href="#running-the-application">Running the Application</a>
-      <ul>
-        <li><a href="#first-challenge">First Challenge</a></li>
-        <li><a href="#second-challenge">Second Challenge</a></li>
-      </ul>
+      <a href="#sub-task-1-predicting-next-movie-year">SubTask1 : Predicting the next movie year </a>
     </li>
-    <li><a href="#challenges">Challenges</a></li>
-    <li><a href="#running-with-docker">Running with Docker (Optional)</a></li>
-    <li><a href="#testing">Testing</a></li>
-    <li><a href="#additional-information">Additional Information</a></li>
+    <li>
+      <a href="#sub-task-2-genre-prediciton">SubTask2: Predicting the genre of next movie </a>
+    </li>
+    <li>
+      <a href="#result">Results </a>
+    </li>
   </ol>
 </details>
 
@@ -33,7 +30,10 @@
 The goal was to develop a model capable of predicting a director's next film's release year and probable genres. By analyzing existing data and creating new features, the project utilized various visualization techniques to explore feature relationships. Machine learning algorithms, including linear regression (for release year) and multi-label classification (for genre prediction), were employed to achieve the desired predictions.
 
 ## Features in the data
-Initially, we had - 
+
+<details>
+<summary>Initially, we had - </summary>
+
 ```python
 Data columns (total 28 columns):
  #   Column                     Non-Null Count  Dtype  
@@ -67,8 +67,13 @@ Data columns (total 28 columns):
  26  aspect_ratio               4714 non-null   float64
  27  movie_facebook_likes       5043 non-null   int64 
  ```
- \
-We added modified the structure and did appropriate our one hot encoding. So the final structure looks like - 
+
+</details><br>
+
+We added modified the structure and did appropriate our one hot encoding.
+
+<details>
+<summary> So the final structure looks like - </summary>
 
 ```python
 Data columns (total 63 columns):
@@ -138,9 +143,44 @@ Data columns (total 63 columns):
  61  collaboration_likes        3769 non-null   float64       
  62  success                    3769 non-null   int32         
 ```
+</details>
+
 
 ## Visualization
 
+<figure>
+  <img src="./images/movies_vs_yrs.png" style= "width : 100%; height: auto" alt="Number of Movies released vs years">
+  <figcaption>The figure suggests that the <b>number of movies produced</b> increased with each passing year with maximum around 2000 and 2010.</figcaption>
+</figure>
+ 
+ ---
+
+<figure>
+  <img src="./images/movies_genre_vs_yrs.png" style= "width : 100%; height: auto" alt="Number of Movies released (genre-wise) vs years">
+  <figcaption>The figure suggests that the <b>number of movies produced in each genre</b> has increased with each passing year with <b>maximum around 2000 and 2010</b>.</figcaption>
+</figure>
+
+---
+
+<figure>
+  <img src="./images/budget_vs_yrs_and_success.png" style= "width : 100%; height: auto" alt="Movies Budget over the years and success.">
+  <figcaption>The figure shows the <b>budget of movies over the years</b> and if they were <b>successful or fail</b>. We can see that a low budget movie is more prone fail and high budget movies are more likely to be a success.
+  Also, the budget is growing with the passing years.</figcaption>
+</figure>
+
+---
+<div style= "display: flex; justiify-content:space-between;">
+<figure>
+  <img src="./images/features_PearsonMatrixx.png" width="500" height="500" alt="Movies Budget over the years and success." style= "width : 100%; height: auto">
+  <figcaption><b>Pearson correlation matrix</b> visualizing relationships between features.</figcaption>
+</figure>
+<figure>
+  <img src="./images/features_SpearmanMatrixx.png" width="1000" height="500" alt="Movies Budget over the years and success." style= "width : 100%; height: auto">
+  <figcaption><b>Spearman correlation matrix</b> visualizing relationships between features.</figcaption>
+</figure>
+</div>
+
+---
 
 ## Sub-Task 1: Predicting next movie year
 - The dataset with new features were divided into training and testing sets (70 - 30 split).
@@ -159,5 +199,27 @@ Data columns (total 63 columns):
     - <u>Precision</u>: Proportion of predicted genres that are actually correct (higher is better).
     - <u>Recall</u>: Proportion of actual genres that are correctly identified by the model (higher is better).
     - <u>F1-score</u>: Harmonic mean between precision and recall, balancing both (higher/closer to 1 is better).
-  
 
+## Result
+
+### For Sub-Task 1
+
+| Model | Mean Squared Error | Mean Absolute Error | R-squared |
+|-|-|-|-|
+| Random Forest Regressor | 25.42 | 3.10 | 0.75 |
+| Gradient Boosting Regressor | 22.06 | 2.87 | 0.78 |
+| Support Vector Regressor | 103.51 | 7.08 | -0.02 |
+| **AdaBoost Regressor** | **21.71** | **2.86** | **0.79** |
+
+### For Sub-Task 2
+
+| Model | Model Accuracy | Precision | Recall | F1 Score |
+|-|-|-|-|-|
+| Random Forest Classifier | 0.0813 | 0.6341 | 0.3112 | 0.3698 |
+| AdaBoost Classifier | 0.0566 | 0.5197 | 0.3191 | 0.3680 |
+| **XGBoost Classifier** | **0.09903** | **0.5552** | **0.4022** | **0.4490** | 
+
+---
+---
+
+<h3 align="center"> - x - X - x -</h3>

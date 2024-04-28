@@ -67,8 +67,8 @@ This project addresses two key tasks related to Natural Language Processing (NLP
 - One-hot encoding is applied to the `category` column within the loaded dataset.
 
 - Text Vectorization with Large Language Models (LLMs)
-
-  - We employ LLM to handle the entire text vectorization pipeline, encompassing tokenization, embedding generation, and (due to LLM capabilities) lowercasing (which becomes unnecessary).
+  - Depending on the specific LLM in use, we segmented texts into chunks of the desired length. This is necessary as texts exceeding the model’s maximum token limit risk truncation, potentially leading to the loss of vital information. Splitting the text into smaller segments mitigates this risk and ensures the preservation of crucial content.
+  - We employed LLM to handle the entire text vectorization pipeline, encompassing tokenization, embedding generation, and (due to LLM capabilities) lowercasing (which becomes unnecessary).
   - Utilizing an LLM offers several advantages:
     - LLM manages all stages within a single library, reducing code complexity.
     - LLMs are trained on massive datasets because of which are adept at generating high-quality embeddings that capture intricate semantic relationships within text data. This has the potential to enhance performance in NLP tasks.

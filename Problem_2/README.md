@@ -35,6 +35,7 @@ Ensure you have the following packages installed:
 - `csv`: For reading and writing CSV files.
 - `json`: For reading and writing JSON files.
 - `os`: For operating system-related functionality.
+- `langchain` : For splitting and processing text.
 
 
 <!-- ABOUT THE PROJECT -->

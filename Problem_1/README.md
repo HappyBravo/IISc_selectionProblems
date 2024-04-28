@@ -189,6 +189,21 @@ Data columns (total 63 columns):
 </figure>
 
 ---
+
+<figure>
+  <img src="./images/distribution_of_1_0.png" style= "width : 100%; height: auto" alt="Movies Budget over the years and success.">
+  <figcaption>The figure shows the movies-genre distribution in the dataset - are not distributed evenly. The top 3 genre are Drama, Comedy, and Thriller.</figcaption>
+</figure>
+
+---
+
+<figure>
+  <img src="./images/number_of_movies_vs_language.png" style= "width : 100%; height: auto" alt="Movies Budget over the years and success.">
+  <figcaption>The figure shows the distribution of movies in differnet languages.</figcaption>
+</figure>
+
+---
+
 <div style= "display: flex; justify-content:space-between;">
 <figure>
   <img src="./images/features_PearsonMatrixx.png" width="500" height="500" alt="Movies Budget over the years and success." style= "width : 100%; height: auto">
